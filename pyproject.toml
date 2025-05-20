@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "extract-google-ads"
+version = "0.1.0"
+description = ""
+authors = ["jonhnatta <jonhnatta.santos@gmail.comclear>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyspark = "^3.5.5"
+google-ads = {version = "^26.1.0", python = ">=3.11,<3.14"}
+python-dotenv = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
