@@ -1,3 +1,4 @@
 google-ads.yaml
 .venv
 .env
+__pycache__
