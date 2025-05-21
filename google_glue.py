@@ -75,6 +75,9 @@ class GoogleAdsInsights:
                 
                 # Converter para objetos datetime/date
                 today = datetime.datetime.now()
+
+                yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
+                yesterday_start = yesterday.replace(hour=0, minute=0, second=0, microsecond=0)
                 
                 processed_data = {
                     "campaign_id": int(row.campaign.id),
@@ -88,8 +91,8 @@ class GoogleAdsInsights:
                     "ctr": ctr,
                     "cpm": cpm,
                     "spend": custo_total,
-                    "date_start": today.date(),
-                    "date_stop": today.date(),
+                    "date_start": yesterday_start.date(),
+                    "date_stop": yesterday_start.date(),
                     "created_at": today
                 }
 
